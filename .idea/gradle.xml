@@ -7,6 +7,14 @@
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../../모프/MyAppC" />
+            <option value="$PROJECT_DIR$/../../모프/MyAppC/app" />
+            <option value="$PROJECT_DIR$/../../모프/MyAppC/cweek04a" />
+            <option value="$PROJECT_DIR$/../../모프/MyAppC/cweek05a" />
+          </set>
+        </option>
         <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
       <GradleProjectSettings>
@@ -18,6 +26,7 @@
             <option value="$PROJECT_DIR$/../../모프/MyAppC" />
             <option value="$PROJECT_DIR$/../../모프/MyAppC/app" />
             <option value="$PROJECT_DIR$/../../모프/MyAppC/cweek04a" />
+            <option value="$PROJECT_DIR$/../../모프/MyAppC/cweek05a" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
