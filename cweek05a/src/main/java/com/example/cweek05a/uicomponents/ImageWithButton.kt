@@ -1,7 +1,6 @@
 package com.example.cweek05a.uicomponents
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
@@ -17,11 +16,23 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.example.cweek05a.R
+import com.example.cweek05a.model.ImageUri
+
+@Composable
+fun ImageWithButton(
+    image: ImageUri,
+    modifier: Modifier = Modifier,
+    button: @Composable () -> Unit
+) {
+    when (image) {
+        is ImageUri.ResImage -> ImageWithButton(image.resID, modifier, button)
+        is ImageUri.WebImage -> ImageWithButton(image.webUrl, modifier, button)
+    }
+}
 
 @Composable
 fun ImageWithButton(image: Int, modifier: Modifier = Modifier, button: @Composable () -> Unit) {
     Column(
-        modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AsyncImage(
@@ -39,7 +50,6 @@ fun ImageWithButton(image: Int, modifier: Modifier = Modifier, button: @Composab
 @Composable
 fun ImageWithButton(image: String, modifier: Modifier = Modifier, button: @Composable () -> Unit) {
     Column(
-        modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AsyncImage(
